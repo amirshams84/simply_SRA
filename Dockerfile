@@ -45,23 +45,14 @@ RUN mkdir /INPUTDIR /EXECDIR /OUTPUTDIR /TESTDIR /INDEXDIR
 RUN chmod -R 0755 /INPUTDIR /EXECDIR /OUTPUTDIR /TESTDIR /INDEXDIR
 ##############################################################
 # Dockerfile Version:   1.0
-# Software:             BLAST
+# Software:             SRA_TOOLKIT
 # Software Version:     1.2
-# Software Website:     BLAST
-# Description:          BLAST 
+# Software Website:     SRA_TOOLKIT
+# Description:          SRA_TOOLKIT 
 ##############################################################
 
-RUN mkdir /EXECDIR/blast
-RUN wget ftp://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/ncbi-blast-2.6.0+-x64-linux.tar.gz -P /EXECDIR/blast
-RUN tar zxf /EXECDIR/blast/ncbi-blast-2.6.0+-x64-linux.tar.gz -C /EXECDIR/blast
-RUN rm -rf /EXECDIR/blast/ncbi-blast-2.6.0+-x64-linux.tar.gz
-RUN chmod -R 0755 /EXECDIR/blast/ncbi-blast-2.6.0+
-##############################################################
-# Dockerfile Version:   1.0
-# Software:             simply_BLAST
-# Software Version:     1.0
-# Software Website:     .
-# Description:          python script 
-##############################################################
-RUN wget https://github.com/amirshams84/simply_BLAST/blob/master/simply_blast.pyc?raw=true -O /simply_blast.pyc
-RUN chmod -R 0755 /simply_blast.pyc
+RUN mkdir /EXECDIR/sratoolkit
+RUN wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2-1/sratoolkit.2.8.2-1-centos_linux64.tar.gz -P /EXECDIR/sratoolkit
+RUN tar zxf /EXECDIR/sratoolkit/sratoolkit.2.8.2-1-centos_linux64.tar.gz -C /EXECDIR/sratoolkit
+RUN rm -rf /EXECDIR/sratoolkit/sratoolkit.2.8.2-1-centos_linux64.tar.gz
+RUN chmod -R 0755 /EXECDIR/sratoolkit/sratoolkit.2.8.2-1-centos_linux64
