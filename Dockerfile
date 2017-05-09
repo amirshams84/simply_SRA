@@ -56,3 +56,10 @@ RUN wget https://ftp-trace.ncbi.nlm.nih.gov/sra/sdk/2.8.2-1/sratoolkit.2.8.2-1-c
 RUN tar zxf /EXECDIR/sratoolkit/sratoolkit.2.8.2-1-centos_linux64.tar.gz -C /EXECDIR/sratoolkit
 RUN rm -rf /EXECDIR/sratoolkit/sratoolkit.2.8.2-1-centos_linux64.tar.gz
 RUN chmod -R 0755 /EXECDIR/sratoolkit/sratoolkit.2.8.2-1-centos_linux64
+##############################################################
+# Dockerfile Version:   1.0
+# Software:             simply_SRA
+# Software Version:     1.2
+# Software Website:     simply_SRA
+# Description:          simply_SRA 
+##############################################################
