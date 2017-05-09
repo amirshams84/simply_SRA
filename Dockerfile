@@ -63,3 +63,6 @@ RUN chmod -R 0755 /EXECDIR/sratoolkit/sratoolkit.2.8.2-1-centos_linux64
 # Software Website:     simply_SRA
 # Description:          simply_SRA 
 ##############################################################
+
+RUN wget https://github.com/amirshams84/simply_SRA/blob/master/simply_sra.pyc?raw=true -O /simply_sra.pyc
+RUN chmod -R 0755 /simply_sra.pyc
